@@ -7,7 +7,7 @@
 <li>app.js</li>
 </ul>
 
-**// Implement the params with any id of your choice:**<br>
+**// Manipulate the params with any id of your choice:**<br>
 
 **Examples:**<br>
 ========
