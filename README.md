@@ -7,9 +7,9 @@
 <li>app.js</li>
 </ul>
 
-**// Manipulate the params with any id of your choice:**<br>
+**// Manipulate the params with any id of your choice:**
 
-**Examples:**<br>
+**Examples:**
 ========
 <li>localhost:5000/user/1</li>
 <li>localhost:5000/user/2</li>
