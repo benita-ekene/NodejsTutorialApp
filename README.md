@@ -15,4 +15,4 @@
 <li>DELETE:-  "localhost:5000/user/Adult" for 'age' parameter to delete a user.</li>
 <li>PUT uses:-   "localhost:5000/user/Male" for 'sex' parameter to update a user.</li>
 <br>
-//Always check the CRUD operator in use before posting your request on Postman.
+//Always check the CRUD operator in use before sending your request on Postman.
