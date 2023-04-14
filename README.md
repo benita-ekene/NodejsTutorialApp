@@ -14,5 +14,5 @@
 <li>POST uses:-   "localhost:5000/user/Benita" for 'name' parameter.</li>
 <li>DELETE:-  "localhost:5000/user/Adult" for 'age' parameter.</li>
 <li>PUT uses:-   "localhost:5000/user/Male" for 'sex' parameter.</li>
-
+<br>
 //Always check the CRUD operator in use before posting your request on Postman.
