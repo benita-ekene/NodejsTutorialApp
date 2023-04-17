@@ -26,7 +26,7 @@ app.delete('/user/:id', (req, res) => {
     user.splice(index, 1);
     res.json(user) 
   }else{
-    res.status(404).res.send(`Member with the ${req.params.id} not found.`)
+    res.status(404).send(`Member with the ${req.params.id} not found.`)
   }
 })
 
@@ -34,7 +34,7 @@ app.delete('/user/:id', (req, res) => {
 app.put('/user/:id', (req, res) => {
   const updatedUser = user.find(userObj => userObj.id === parseInt(req.params.id));
   if (!updatedUser) {
-      res.status(404).res.send(`The customer with id ${req.params.id} was not found`);
+      res.status(404).send(`The customer with id ${req.params.id} was not found`);
   } else {
     updatedUser.name = req.body.name;
     updatedUser.age = req.body.age;
