@@ -4,24 +4,43 @@ const user = require('./UserObject');
 const app = express();
 app.use(express.json())
 
-//create route handlers/endpoints to get individual user
+
+//get individual user
 app.get('/user/:id', (req, res) => {
  res.json(user.filter(user1 => user1.id === parseInt(req.params.id)))
 })
 
+//create users
 app.post('/user/create', (req, res) => {
   const newUser = req.body
   user.push(newUser)
   res.json(user)
 })
 
-app.delete('/user/:age', (req, res) => {
-  res.json(user.filter(user1 => user1.age === req.params.age))
+
+//delete users
+app.delete('/user/:id', (req, res) => {
+  const deletedUser = user.find(unwantedUser => unwantedUser.id === parseInt(req.params.id))
+  if(deletedUser){
+    const index = user.indexOf(deletedUser);
+    user.splice(index, 1);
+    res.json(user) 
+  }else{
+    res.status(404).res.send(`Member with the ${req.params.id} not found.`)
+  }
 })
 
-app.put('/user/:sex', (req, res) => {
-  res.json(user.filter(user1 => user1.sex === req.params.sex))
-})
+//update users
+app.put('/user/:id', (req, res) => {
+  const updatedUser = user.find(userObj => userObj.id === parseInt(req.params.id));
+  if (!updatedUser) {
+      res.status(404).res.send(`The customer with id ${req.params.id} was not found`);
+  } else {
+    updatedUser.name = req.body.name;
+    updatedUser.age = req.body.age;
+      res.json(user);
+  }
 
+})
 app.listen(5000)
  

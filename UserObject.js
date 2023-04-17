@@ -2,13 +2,19 @@ const user =
 [{
   id: 1,
   name: "Benita",
-  age: "Adult", 
+  age: "18", 
   sex: "Female"
 },
 {
   id: 2,
+  name: "Clara",
+  age: "12", 
+  sex: "Female"
+},
+{
+  id: 3,
   name: "Emily",
-  age: "Child",
+  age: "3",
   sex: "Male"
 }];
 
