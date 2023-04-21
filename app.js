@@ -50,8 +50,8 @@ app.get('/user/search', (req, res) => {
   res.status(200).json({
     status: "success",
     message: "message",
-    data: {id, name, sex}, users
-
+    data: {id, name, sex}
+    
   })
   
 })
