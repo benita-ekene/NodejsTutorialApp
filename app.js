@@ -42,5 +42,19 @@ app.put('/user/:id', (req, res) => {
   }
 
 })
+
+//Implementing search params
+
+app.get('/user/search', (req, res) => {
+  const {id, name, sex} = req.query
+  res.status(200).json({
+    status: "success",
+    message: "message",
+    data: {id, name, sex}, users
+
+  })
+  
+})
+
 app.listen(5000)
  
